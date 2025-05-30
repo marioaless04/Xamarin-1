@@ -1,0 +1,12 @@
+<ContentPage Title="Lista de Tareas">
+    <StackLayout>
+        <ListView x:Name="taskListView" ItemSelected="OnTaskSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Description}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Agregar Tarea" Clicked="OnAddTaskClicked"/>
+    </StackLayout>
+</ContentPage>
